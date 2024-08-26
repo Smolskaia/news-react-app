@@ -12,7 +12,7 @@ const Main = () => {
     const fetchNews = async () => {
       try {
         const response = await getNews();
-        // console.log(response.news);
+        console.log(response.news);
         setNews(response.news);
       } catch (error) {
         console.log(error);
@@ -20,7 +20,7 @@ const Main = () => {
     };
     fetchNews();
   }, []);
-  
+
   return (
     <main className={styles.main}>
       {news.length > 0 ? <NewsBanner item={news[0]}/> : null}
